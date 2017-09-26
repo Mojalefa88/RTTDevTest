@@ -137,7 +137,7 @@ namespace RTT.Controllers
             foreach (DataRow data in clientData.Rows)
             {
 
-                sb.AppendLine(data["clientID"].ToString() + "," + data["name"].ToString() + "," + data["gender"].ToString() + ", " + data["resAddress"].ToString() + ", " + data["workAddress"].ToString() + ", " + data["posAddress"].ToString());
+                sb.AppendLine(data["clientID"].ToString() + "," + data["firstName"].ToString() + "," + data["gender"].ToString() + ", " + data["resAddress"].ToString() + ", " + data["workAddress"].ToString() + ", " + data["posAddress"].ToString());
             }
             return File(new UTF8Encoding().GetBytes(sb.ToString()), "application/txt", "clientData_" + DateTime.Now + ".txt");
         }
