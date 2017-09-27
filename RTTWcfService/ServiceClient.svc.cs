@@ -19,8 +19,6 @@ namespace RTTWcfService
     public class ServiceClient : IClient
     {
         private DBConnection dbConn = new DBConnection();
-       // private DataLayer dataLayer = new DataLayer();
-       // private string sqlQuery;
         private string message;
 
         public string InsertClient(Client client, Address address, Contact contact)
@@ -65,9 +63,8 @@ namespace RTTWcfService
                 message = "Address Not Added";
             }
 
-           string sqlContactQuery = "INSERT INTO Contact "// (clientId, cellPhone, workPhone, homePhone, email) "
+           string sqlContactQuery = "INSERT INTO Contact "
                      + "VALUES (@clientID, @cellPhone, @workPhone, @homePhone, @email)";
-            //int result = dataLayer.AddClient(client, address, contact);
             SqlCommand cmdContact = new SqlCommand(sqlContactQuery, dbConn.connection);
             cmdContact.Parameters.AddWithValue("@clientID", clientID);
             cmdContact.Parameters.AddWithValue("@cellPhone", contact.CellPhone);
@@ -87,20 +84,6 @@ namespace RTTWcfService
             }
             return message;
         }
-        /*
-         * public DataSet GetClientDetails()
-        {
-            SqlConnection sqlConnection = new SqlConnection(@"Data Source=LUTHULCOMP2\SQLEXPRESS;Initial Catalog=ClientManagerDb;Integrated Security=True");
-            sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT ClientDetails.clientId, ClientDetails.name,ClientDetails.gender,ClientDetails.cellNumber, ClientDetails.workTel, ClientAddress.resAddress, ClientAddress.workAddress, ClientAddress.posAddress FROM ClientDetails, ClientAddress WHERE  ClientDetails.clientId = ClientAddress.clientId", sqlConnection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cmd.ExecuteNonQuery();
-            sqlConnection.Close();
-            return ds;
-        }
-         */
         public DataSet GetClient(int clientID)
         {
             dbConn.openConnection();

@@ -22,6 +22,14 @@ namespace RTT.Controllers
            
         }
 
+        public ActionResult TestIndex()
+        {
+            DataSet ds = clientServiceRef.GetClients();
+            ViewBag.ClientList = ds.Tables[0];
+            clientServiceRef.Close();
+            return View();
+
+        }
         public ActionResult Create()
         {
 
@@ -141,8 +149,7 @@ namespace RTT.Controllers
                                   + "," + data["gender"].ToString() + ", " + data["idNumber"].ToString() 
                                   + ", " + data["nationality"].ToString() + ", " + data["residentialAddress"].ToString()
                                   + ", " + data["postalAddress"].ToString() + ", " + data["workAddress"].ToString()
-                                  + ", " + data["cellPhone"].ToString() + ", " + data["homePhone"].ToString()
-                                  + ", " + data["workPhone"].ToString() + ", " + data["email"].ToString());
+                                  + ", " + data["email"].ToString());
             }
             return File(new UTF8Encoding().GetBytes(sb.ToString()), "application/txt", "clientData_" + DateTime.Now + ".txt");
         }

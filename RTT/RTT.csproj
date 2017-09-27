@@ -168,14 +168,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.min.js" />
     <Content Include="Content\dataTables.bootstrap.min.css" />
-    <Content Include="Content\dataTables.bootstrap.min.js" />
     <Content Include="Content\dataTables.jqueryui.min.css" />
-    <Content Include="Content\dataTables.jqueryui.min.js" />
     <Content Include="Content\jquery.dataTables.min.css" />
-    <Content Include="Content\jquery.dataTables.min.js" />
-    <Content Include="Content\jquery.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -200,9 +195,12 @@
     </None>
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -227,6 +225,7 @@
     <Content Include="Views\ClientManagement\Create.cshtml" />
     <Content Include="Views\ClientManagement\Index.cshtml" />
     <Content Include="Views\ClientManagement\Update.cshtml" />
+    <Content Include="Views\ClientManagement\TestIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

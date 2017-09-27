@@ -11,7 +11,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>RTT</title>
 
-   
+
     <link href="Content/jquery.dataTables.min.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/dataTables.bootstrap.min.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
 </head>
 <body>
     <br />
-<h4>Client Details</h4>
+    <h4>Client Details</h4>
 
     <hr />
     <div class="container">
@@ -64,8 +64,9 @@
                         <td>@item["workPhone"].ToString()</td>
                         <td>@item["homePhone"].ToString()</td>
                         <td>@item["email"].ToString()</td>
-                        <td>@Html.ActionLink("Delete", "Delete", new { id = Convert.ToInt32(@item["clientID"].ToString()) }) @Html.ActionLink("Update", "Update", new { id = Convert.ToInt32(@item["clientID"].ToString()) })
-                       
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = Convert.ToInt32(@item["clientID"].ToString()) }) @Html.ActionLink("Update", "Update", new { id = Convert.ToInt32(@item["clientID"].ToString()) })
+
                         </td>
 
                         @*@Html.ActionLink("Delete", "Delete", new { id = Convert.ToInt32(@item["clientID"].ToString()) })*@
@@ -74,7 +75,7 @@
             </tbody>
         </table>
         <hr />
-       
+
     </div>
 
 
@@ -83,13 +84,13 @@
     <script src="Scripts/jquery.dataTables.min.js"></script>
     <script src="Scripts/dataTables.bootstrap.min.js"></script>
 
-    
+
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#myTable').DataTable();
         });
     </script>
-   
-    </body>
+
+</body>
 </html>
