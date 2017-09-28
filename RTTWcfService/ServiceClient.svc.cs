@@ -6,7 +6,6 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using RTTWcfService.DAL;
 using System.Data.SqlClient;
 using RTTWcfService.DBConn;
 using System.Data;
